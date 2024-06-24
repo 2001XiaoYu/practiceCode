@@ -14,7 +14,8 @@ import { createApp } from 'vue'
 // import App from './12_动态组件的使用/App.vue'
 // import App from './13_Kepp-Alive的使用/App.vue'
 // import App from './14_异步组件的使用/App.vue'
-import App from './15_组件的v-model/App.vue'
+// import App from './15_组件的v-model/App.vue'
+import App from './16_组件的混入Mixin/App.vue'
 
 // import { sum } from './utils/math'
 // sum(10, 20)
@@ -23,4 +24,12 @@ import App from './15_组件的v-model/App.vue'
 //     res.sum(20, 30)
 // })
 
-createApp(App).mount('#app')
+// mixin全局混入
+const app = createApp(App)
+app.mixin({
+    created() {
+        console.log("mixin created");
+    }
+})
+app.mount('#app')
+// createApp(App).mount('#app')

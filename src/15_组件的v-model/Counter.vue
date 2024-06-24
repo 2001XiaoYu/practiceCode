@@ -1,5 +1,5 @@
 <template>
-    <div>Counter: {{ modelValue }}</div>
+    <div class="counter">Counter: {{ modelValue }}</div>
     <button @click="changeCounter">修改counter</button>
 </template>
 
@@ -21,5 +21,7 @@
 </script>
 
 <style scoped>
-
+.counter {
+    font-size: 500px;
+}
 </style>
